@@ -44,13 +44,22 @@ This repository contains solutions for various Node.js file system tasks.
 
 Run each script to test its functionality:
 
-node task1.js
-node task2.js
-node task3_sync.js
-node task3_async.js
-node task4.js
-node task5.js
-node task6.js
-node task7_list.js
-node task7_copy.js
-node task8.js
+- node task1.js
+
+- node task2.js
+
+- node task3_sync.js
+
+- node task3_async.js
+
+- node task4.js
+
+- node task5.js
+
+- node task6.js
+
+- node task7_list.js
+
+- node task7_copy.js
+
+- node task8.js
