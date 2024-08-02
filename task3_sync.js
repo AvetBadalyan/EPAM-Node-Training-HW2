@@ -7,13 +7,9 @@
 
 const fs = require("fs");
 
-const filePath = "asyncFile.txt";
+const filePath = "syncFile.txt";
 
-fs.writeFile(filePath, "This is written asynchronously.", "utf8", (err) => {
-  if (err) throw err;
+fs.writeFileSync(filePath, "This is written synchronously.", "utf8");
 
-  fs.readFile(filePath, "utf8", (err, data) => {
-    if (err) throw err;
-    console.log(data);
-  });
-});
+const data = fs.readFileSync(filePath, "utf8");
+console.log(data);

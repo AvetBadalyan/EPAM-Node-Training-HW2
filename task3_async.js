@@ -1,3 +1,4 @@
+
 /* Task 3: Synchronous vs. Asynchronous Operations
 **Instructions**:
 1. Write two scripts:
@@ -7,9 +8,13 @@
 
 const fs = require("fs");
 
-const filePath = "syncFile.txt";
+const filePath = "asyncFile.txt";
 
-fs.writeFileSync(filePath, "This is written synchronously.", "utf8");
+fs.writeFile(filePath, "This is written asynchronously.", "utf8", (err) => {
+  if (err) throw err;
 
-const data = fs.readFileSync(filePath, "utf8");
-console.log(data);
+  fs.readFile(filePath, "utf8", (err, data) => {
+    if (err) throw err;
+    console.log(data);
+  });
+});
